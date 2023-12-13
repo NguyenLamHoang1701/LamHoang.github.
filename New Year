@@ -1,0 +1,30 @@
+<div class="feliz">Happy new year</div>
+<div class="ano_novo">
+  <span>201</span>
+  <span class="seis">6</span>
+  <span class="sete">7</span>
+  <div class="balao"></div>
+</div>
+<div class="fogos">
+  <div class="f1">
+    <span><i></i></span>
+    <span><i></i></span>
+    <span><i></i></span>
+  </div>
+  <div class="f2">
+    <span><i></i></span>
+    <span><i></i></span>
+    <span><i></i></span>
+  </div>
+  <div class="f3">
+    <span><i></i></span>
+    <span><i></i></span>
+    <span><i></i></span>
+  </div>
+  <div class="f4">
+    <span><i></i></span>
+    <span><i></i></span>
+    <span><i></i></span>
+  </div>
+</div>
+<a href="https://twitter.com/cecelabomfim" class="author">Marcela Bomfim</a>
