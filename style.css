@@ -7,13 +7,9 @@
   -webkit-transition: all 100ms ease-in;
   transition: all 100ms ease-in;
 }
-/* html{
+html{
 	background: #222048;
-} */
- html{
-	background: #000000;
-} 
-
+}
 .feliz{
   width: 100%;
   font-family: 'Pacifico', cursive;
@@ -111,7 +107,98 @@ span.sete:before{
   margin-left: -2px;
   bottom: -110px;
 }
-
+.fogos{
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.fogos>div{
+  border: 2px solid #fff;
+  position: absolute;
+  opacity: 0;
+  animation: solta_fogos 1.5s ease-in-out 8s forwards;
+}
+.fogos>div.f1{
+  left: 20%;
+  top: 40%;
+}
+.fogos>div.f2{
+  left: 15%;
+  top: 70%;
+}
+.fogos>div.f3{
+  right: 20%;
+  top: 40%;
+}
+.fogos>div.f4{
+  right: 15%;
+  top: 70%;
+}
+.fogos>div span{
+  width: 6px;
+  height: 6px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  animation: estoura_fogos 0.5s ease-in-out 9s forwards;
+}
+.fogos>div span:nth-child(1){
+  transform: rotate(0deg);
+}
+.fogos>div span:nth-child(2){
+  transform: rotate(120deg);
+}
+.fogos>div span:nth-child(3){
+  transform: rotate(240deg);
+}
+.fogos>div span:before{
+  content: '';
+  width: 2px;
+  height: 50px;
+  display: block;
+  background: #f5cc06;
+  position: absolute;
+  top: -60px;
+  left: 2px;
+}
+.fogos>div span:after{
+  content: '';
+  width: 2px;
+  height: 50px;
+  display: block;
+  background: #f5cc06;
+  position: absolute;
+  bottom: -60px;
+  left: 2px;
+}
+.fogos>div span i:before{
+  content: '';
+  width: 3px;
+  height: 3px;
+  display: block;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  top: -15px;
+  left: 10px;
+}
+.fogos>div span i:after{
+  content: '';
+  width: 3px;
+  height: 3px;
+  display: block;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  top: -15px;
+  right: 10px;
+}
 a.author{
   font-size: 12px;
   text-decoration: none;
@@ -227,4 +314,3 @@ a.author{
     opacity: 1;
   }
 }
-
