@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .image-container {
+      display: flex;
+      margin-top: 20px;
+    }
+
+    .image {
+      width: 100px;
+      height: 100px;
+      margin: 0 10px;
+      border: 1px solid #000;
+      background-size: cover;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+  <title>Random Images</title>
+</head>
+<body>
+  <div id="image-container" class="image-container"></div>
+  <button onclick="randomImages()">Random Images</button>
+  <script>
+    const images = [
+      'dice_1.png',
+      'dice_2.png',
+      'dice_3.png',
+      'dice_4.png',
+      'dice_5.png',
+      'dice_6.png'
+    ];
+
+    function randomImages() {
+      const shuffledImages = shuffleArray(images).slice(0, 3);
+
+      const imageContainer = document.getElementById('image-container');
+      imageContainer.innerHTML = '';
+
+      shuffledImages.forEach(image => {
+        const imageElement = document.createElement('div');
+        imageElement.classList.add('image');
+        imageElement.style.backgroundImage = `url('${image}')`;
+        imageContainer.appendChild(imageElement);
+      });
+    }
+
+    // Hàm trộn mảng
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+  </script>
+</body>
+</html>
