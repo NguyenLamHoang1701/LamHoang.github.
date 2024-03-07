@@ -1,0 +1,32 @@
+.bt1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: var(--border-width);
+    border-radius: var(--border-radius);
+    border: 10px solid transparent; /* Add this line for the transparent border */
+    background-image: conic-gradient(
+      #488cfb,
+      #29dbbc,
+      #ddf505,
+      #ff9f0e,
+      #e440bb,
+      #655adc,
+      #488cfb
+    );
+    -webkit-mask-image: conic-gradient(#000, #000);
+    mask-image: conic-gradient(#000, #000);
+    -webkit-mask-origin: content-box, padding-box;
+    mask-origin: content-box, padding-box;
+    -webkit-mask-clip: content-box, padding-box;
+    mask-clip: content-box, padding-box;
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out;
+    filter: hue-rotate(0);
+    animation: rotate-hue linear 1s infinite;
+    animation-play-state: paused;
+  }
+  
